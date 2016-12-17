@@ -68,7 +68,6 @@ class wordFeedVC: UIViewController {
                         self.ArrayOfWords.append(userMessage!)
                         self.ArrayOfKeys.append(myKey)
                     }
-                    self.buttonIsEmpty = false
                     
                     if (self.whichButtonEmpty != 0){
                         switch(self.whichColumn(argument: self.whichButtonEmpty)){
@@ -116,6 +115,7 @@ class wordFeedVC: UIViewController {
                     }
                     
                     self.scrollView.contentSize.height = CGFloat(self.height)
+                    self.buttonIsEmpty = false
                     
                 }
             }
@@ -203,12 +203,11 @@ class wordFeedVC: UIViewController {
                     self.ref.child(self.UserKey).removeValue()
                     
                 }
-                /*else
+                else
                 {
                     print("No Matches... Yet")
-                    self.errLabel1.isHidden = false
-                    self.errLabel2.isHidden = false
-                }*/
+                }
+    
             }
             
         })
@@ -231,8 +230,18 @@ class wordFeedVC: UIViewController {
         button.setTitle(message, for: UIControlState.normal)
         button.setTitleColor(UIColor.darkGray, for: UIControlState.normal)
         button.tag = self.count      //tag is the same as index positions in arrays
-        ArrayOfButtons.append(button)
+        //ArrayOfButtons.append(button)
         self.view.addSubview(button)
+        
+        if(self.buttonIsEmpty == true){
+            button.tag = self.whichButtonEmpty
+            ArrayOfButtons[self.whichButtonEmpty] = button
+        }
+        else{
+            button.tag = self.count
+            ArrayOfButtons.append(button)
+            
+        }
         
     }
     
