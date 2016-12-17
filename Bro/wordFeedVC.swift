@@ -52,8 +52,8 @@ class wordFeedVC: UIViewController {
             
             if userMessage != nil{
                 
-                if(myKey != self.UserKey && self.withinRadius(lat1: user.lat, lon1: user.long, lat2: latitude, lon2: longitude, rad: 25)){
-                    
+                if(myKey != self.UserKey)// && self.withinRadius(lat1: user.lat, lon1: user.long, lat2: latitude, lon2: longitude, rad: 50))
+                {
                     for index in 0...self.ArrayOfKeys.count-1{
                         if (self.ArrayOfKeys[index] == "0"){
                             self.whichButtonEmpty = index;
@@ -199,7 +199,7 @@ class wordFeedVC: UIViewController {
                     
                     displayMessage = self.ArrayOfWords[0]
                     
-                    self.performSegue(withIdentifier: "matchedSegue", sender: Any?.self)
+                    self.performSegue(withIdentifier: "toMatch", sender: Any?.self)
                     self.ref.child(self.UserKey).removeValue()
                     
                 }
@@ -291,7 +291,7 @@ class wordFeedVC: UIViewController {
         let c = 2 * atan2(sqrt(a), sqrt(1-a));
         let d = R * c;
         
-        print ("Distance: \(d)")
+        print ("Distance: \(d*1000)")
         return (d*1000 < rad)
     }
     
