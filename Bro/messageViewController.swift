@@ -2,7 +2,7 @@
 //  messageViewController.swift
 //  Bro
 //
-//  Created by Sachin Saxena on 10/22/16.
+//  Created by Sachin Saxena on 10/29/16.
 //  Copyright © 2016 HackLAds. All rights reserved.
 //
 
@@ -60,6 +60,27 @@ class messageViewController: UIViewController {
     var label8key = ""
     var label9key = ""
 
+    func withinRadius(lat1: Double, lon1: Double, lat2: Double, lon2: Double, rad: Double) -> Bool
+    {
+        var R = 6371.0; // km
+        var dLat = toRad(degrees: lat2-lat1);
+        var dLon = toRad(degrees: lon2-lon1);
+        var lat1 = toRad(degrees: lat1);
+        var lat2 = toRad(degrees: lat2);
+        
+        var a = sin(dLat/2) * sin(dLat/2) + sin(dLon/2) * sin(dLon/2) * cos(lat1) * cos(lat2);
+        var c = 2 * atan2(sqrt(a), sqrt(1-a));
+        var d = R * c;
+        
+        print ("Distance: \(d)")
+        return (d*1000 < rad)
+    }
+    
+    func toRad(degrees: Double) -> Double
+    {
+        return degrees * 22/7/180
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,23 +102,27 @@ class messageViewController: UIViewController {
 
             if user.key != keys
             {
-                switch (self.count)
-                {
-                case 1: self.label1.isHidden = false; self.label1.text = user.message; self.button1.isHidden = false; self.label1key = user.key; print (user.key); break;
-                    case 2: self.label2.isHidden = false; self.label2.text = user.message; self.button2.isHidden = false; self.label2key = user.key;break;
-                    case 3: self.label3.isHidden = false; self.label3.text = user.message; self.button3.isHidden = false; self.label3key = user.key;break;
-                    case 4: self.label4.isHidden = false; self.label4.text = user.message; self.button4.isHidden = false; self.connect.isHidden = false; self.label4key = user.key;break;
-                    case 5: self.label5.isHidden = false; self.label5.text = user.message; self.button5.isHidden = false; self.label5key = user.key;break;
-                    case 6: self.label6.isHidden = false; self.label6.text = user.message; self.button6.isHidden = false; self.label6key = user.key;break;
-                    case 7: self.label7.isHidden = false; self.label7.text = user.message; self.button7.isHidden = false; self.discover.isHidden = false; self.label7key = user.key;break;
-                    case 8: self.label8.isHidden = false; self.label8.text = user.message; self.button8.isHidden = false; self.label8key = user.key;break;
-                    case 9: self.label9.isHidden = false; self.label9.text = user.message; self.button9.isHidden = false; self.meet.isHidden = false; self.label9key = user.key;break;
-                    default: break;
+                print("My Lat: \(latitude)")
+                print("My Lon: \(longitude)")
+                print("User Lat: \(user.lat)")
+                print("User Long: \(user.long)")
+                if self.withinRadius(lat1: user.lat, lon1: user.long, lat2: latitude, lon2: longitude, rad: 25)
+                {   switch (self.count)
+                    {
+                        case 1: self.label1.isHidden = false; self.label1.text = user.message; self.button1.isHidden = false; self.label1key = user.key; print (user.key); break;
+                        case 2: self.label2.isHidden = false; self.label2.text = user.message; self.button2.isHidden = false; self.label2key = user.key;break;
+                        case 3: self.label3.isHidden = false; self.label3.text = user.message; self.button3.isHidden = false; self.label3key = user.key;break;
+                        case 4: self.label4.isHidden = false; self.label4.text = user.message; self.button4.isHidden = false; self.connect.isHidden = false; self.label4key = user.key;break;
+                        case 5: self.label5.isHidden = false; self.label5.text = user.message; self.button5.isHidden = false; self.label5key = user.key;break;
+                        case 6: self.label6.isHidden = false; self.label6.text = user.message; self.button6.isHidden = false; self.label6key = user.key;break;
+                        case 7: self.label7.isHidden = false; self.label7.text = user.message; self.button7.isHidden = false; self.discover.isHidden = false; self.label7key = user.key;break;
+                        case 8: self.label8.isHidden = false; self.label8.text = user.message; self.button8.isHidden = false; self.label8key = user.key;break;
+                        case 9: self.label9.isHidden = false; self.label9.text = user.message; self.button9.isHidden = false; self.meet.isHidden = false; self.label9key = user.key;break;
+                        default: break;
+                    }
+                 
+                    self.count = self.count + 1
                 }
-             
-                self.count = self.count + 1
-                
-                
             }
         }
         
@@ -237,6 +262,7 @@ class messageViewController: UIViewController {
         ref.removeAllObservers()
         myRef.removeAllObservers()
     }
+    
     
     @IBOutlet var error1: UILabel!
     @IBOutlet var error2: UILabel!

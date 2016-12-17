@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030A386B1DBC541900A5F2F4 /* HexagonLastScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 030A386A1DBC541900A5F2F4 /* HexagonLastScreen.png */; };
-		0317F60B1DBC32DB008D07F6 /* iceCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 0317F6091DBC32DB008D07F6 /* iceCube.png */; };
-		0317F60C1DBC32DB008D07F6 /* Nexagons.png in Resources */ = {isa = PBXBuildFile; fileRef = 0317F60A1DBC32DB008D07F6 /* Nexagons.png */; };
 		0317F6101DBC3ABB008D07F6 /* messageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317F60F1DBC3ABB008D07F6 /* messageViewController.swift */; };
+		031851CD1DBD1DD2003982DD /* HexagonLastScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 031851CC1DBD1DD2003982DD /* HexagonLastScreen.png */; };
+		031851CF1DBD1DEC003982DD /* iceCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 031851CE1DBD1DEC003982DD /* iceCube.png */; };
+		031851D11DBD1E16003982DD /* Nexagons.png in Resources */ = {isa = PBXBuildFile; fileRef = 031851D01DBD1E16003982DD /* Nexagons.png */; };
 		03859B191DBB423E00B75F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B181DBB423E00B75F77 /* AppDelegate.swift */; };
 		03859B1B1DBB423E00B75F77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B1A1DBB423E00B75F77 /* ViewController.swift */; };
 		03859B1E1DBB423E00B75F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03859B1C1DBB423E00B75F77 /* Main.storyboard */; };
@@ -45,10 +45,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		030A386A1DBC541900A5F2F4 /* HexagonLastScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HexagonLastScreen.png; path = ../../DevJects/HexagonLastScreen.png; sourceTree = "<group>"; };
-		0317F6091DBC32DB008D07F6 /* iceCube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iceCube.png; path = ../../DevJects/attachments/iceCube.png; sourceTree = "<group>"; };
-		0317F60A1DBC32DB008D07F6 /* Nexagons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Nexagons.png; path = ../../DevJects/attachments/Nexagons.png; sourceTree = "<group>"; };
 		0317F60F1DBC3ABB008D07F6 /* messageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageViewController.swift; sourceTree = "<group>"; };
+		031851CC1DBD1DD2003982DD /* HexagonLastScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HexagonLastScreen.png; sourceTree = "<group>"; };
+		031851CE1DBD1DEC003982DD /* iceCube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iceCube.png; sourceTree = "<group>"; };
+		031851D01DBD1E16003982DD /* Nexagons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nexagons.png; sourceTree = "<group>"; };
 		03859B151DBB423E00B75F77 /* Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B181DBB423E00B75F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03859B1A1DBB423E00B75F77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,8 +131,10 @@
 		03859B171DBB423E00B75F77 /* Bro */ = {
 			isa = PBXGroup;
 			children = (
-				030A386A1DBC541900A5F2F4 /* HexagonLastScreen.png */,
 				03C59F111DBBF8E9003D52B5 /* Bro.entitlements */,
+				031851CC1DBD1DD2003982DD /* HexagonLastScreen.png */,
+				031851CE1DBD1DEC003982DD /* iceCube.png */,
+				031851D01DBD1E16003982DD /* Nexagons.png */,
 				03859B181DBB423E00B75F77 /* AppDelegate.swift */,
 				03859B1A1DBB423E00B75F77 /* ViewController.swift */,
 				03859B491DBB482A00B75F77 /* user.swift */,
@@ -140,8 +142,6 @@
 				0317F60F1DBC3ABB008D07F6 /* messageViewController.swift */,
 				03859B221DBB423E00B75F77 /* Assets.xcassets */,
 				03859B241DBB423E00B75F77 /* LaunchScreen.storyboard */,
-				0317F6091DBC32DB008D07F6 /* iceCube.png */,
-				0317F60A1DBC32DB008D07F6 /* Nexagons.png */,
 				03859B271DBB423E00B75F77 /* Info.plist */,
 				03859B4B1DBB51BB00B75F77 /* GoogleService-Info.plist */,
 				03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */,
@@ -267,7 +267,7 @@
 				TargetAttributes = {
 					03859B141DBB423E00B75F77 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L8TS8ZKSQT;
+						DevelopmentTeam = A3WW4ML98X;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -312,13 +312,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0317F60C1DBC32DB008D07F6 /* Nexagons.png in Resources */,
-				0317F60B1DBC32DB008D07F6 /* iceCube.png in Resources */,
+				031851CF1DBD1DEC003982DD /* iceCube.png in Resources */,
+				031851D11DBD1E16003982DD /* Nexagons.png in Resources */,
 				03859B261DBB423E00B75F77 /* LaunchScreen.storyboard in Resources */,
 				03859B4C1DBB51BB00B75F77 /* GoogleService-Info.plist in Resources */,
+				031851CD1DBD1DD2003982DD /* HexagonLastScreen.png in Resources */,
 				03859B231DBB423E00B75F77 /* Assets.xcassets in Resources */,
 				03859B1E1DBB423E00B75F77 /* Main.storyboard in Resources */,
-				030A386B1DBC541900A5F2F4 /* HexagonLastScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,15 +623,18 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 896AD90E90206FE92CDB31F5 /* Pods-Bro.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = Bro/Bro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = L8TS8ZKSQT;
+				DEVELOPMENT_TEAM = A3WW4ML98X;
 				INFOPLIST_FILE = Bro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HackLAds.Bro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -639,16 +642,19 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B5C05AE2E36E8976F985C44C /* Pods-Bro.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = Bro/Bro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
-				DEVELOPMENT_TEAM = L8TS8ZKSQT;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = A3WW4ML98X;
 				INFOPLIST_FILE = Bro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HackLAds.Bro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

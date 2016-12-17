@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Bro
 //
-//  Created by Sachin Saxena on 10/21/16.
+//  Created by Sachin Saxena on 10/29/16.
 //  Copyright © 2016 HackLAds. All rights reserved.
 //
 
@@ -13,48 +13,56 @@ import CoreLocation
 var keys = ""
 var displayMessage = ""
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+var latitude:CLLocationDegrees = 0.0
+var longitude:CLLocationDegrees = 0.0
+
+
+class ViewController: UIViewController, CLLocationManagerDelegate
+{
 
     @IBOutlet var messageText: UITextField!
     
     var ref: FIRDatabaseReference!
     
-//    var manager = CLLocationManager()
-//    
-//    var latitude:CLLocationDegrees = 0.0
-//    var longitude:CLLocationDegrees = 0.0
-//
-//    let locationManager = CLLocationManager()
-//    
-    override func viewDidLoad() {
+    let manager = CLLocationManager()
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         ref = FIRDatabase.database().reference()
         
+        manager.delegate = self
+        manager.requestLocation()
     }
 
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            
+            latitude = location.coordinate.latitude
+            longitude = location.coordinate.longitude
+            print("Found user's lat: \(location.coordinate.latitude)")
+            print("Found user's long: \(location.coordinate.longitude)")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Failed to find user's location: \(error.localizedDescription)")
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
-//    {
-//        let location = locations.last
-//    
-//        latitude = location!.coordinate.latitude
-//        longitude = location!.coordinate.longitude
-//        
-//        self.locationManager.stopUpdatingLocation()
-//    }
-
     
-    @IBAction func breakTheIce(_ sender: Any) 
+    @IBAction func breakTheIce(_ sender: Any)
     {
         keys = ref.childByAutoId().key
         
         displayMessage = messageText.text!
         
-        let user = userObject(key: keys, message: messageText.text!, match: false)//, lat: "\(latitude)", long: "\(longitude)")
+        let user = userObject(key: keys, message: messageText.text!, match: false, lat: latitude, long: longitude)
         
         let childUpdates = ["/\(keys)/" : user.getSnapshotValue()]
         
