@@ -103,9 +103,9 @@
 		03859B0C1DBB423E00B75F77 = {
 			isa = PBXGroup;
 			children = (
-				03859B171DBB423E00B75F77 /* Nector */,
-				03859B2F1DBB423F00B75F77 /* NectorTests */,
-				03859B3A1DBB423F00B75F77 /* NectorUITests */,
+				03859B171DBB423E00B75F77 /* Bro */,
+				03859B2F1DBB423F00B75F77 /* BroTests */,
+				03859B3A1DBB423F00B75F77 /* BroUITests */,
 				03859B161DBB423E00B75F77 /* Products */,
 				F2C467A0A08C1303404B2328 /* Pods */,
 				B1A7F1B5F3BAE93945A4B2EE /* Frameworks */,
@@ -122,7 +122,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		03859B171DBB423E00B75F77 /* Nector */ = {
+		03859B171DBB423E00B75F77 /* Bro */ = {
 			isa = PBXGroup;
 			children = (
 				03C59F111DBBF8E9003D52B5 /* Bro.entitlements */,
@@ -138,27 +138,24 @@
 				03859B4B1DBB51BB00B75F77 /* GoogleService-Info.plist */,
 				03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */,
 			);
-			name = Nector;
 			path = Bro;
 			sourceTree = "<group>";
 		};
-		03859B2F1DBB423F00B75F77 /* NectorTests */ = {
+		03859B2F1DBB423F00B75F77 /* BroTests */ = {
 			isa = PBXGroup;
 			children = (
 				03859B301DBB423F00B75F77 /* BroTests.swift */,
 				03859B321DBB423F00B75F77 /* Info.plist */,
 			);
-			name = NectorTests;
 			path = BroTests;
 			sourceTree = "<group>";
 		};
-		03859B3A1DBB423F00B75F77 /* NectorUITests */ = {
+		03859B3A1DBB423F00B75F77 /* BroUITests */ = {
 			isa = PBXGroup;
 			children = (
 				03859B3B1DBB423F00B75F77 /* BroUITests.swift */,
 				03859B3D1DBB423F00B75F77 /* Info.plist */,
 			);
-			name = NectorUITests;
 			path = BroUITests;
 			sourceTree = "<group>";
 		};
