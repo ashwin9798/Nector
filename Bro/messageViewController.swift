@@ -5,7 +5,7 @@
 //  Created by Sachin Saxena on 10/29/16.
 //  Copyright © 2016 HackLAds. All rights reserved.
 //
-
+/*
 import UIKit
 import Firebase
 
@@ -318,4 +318,4 @@ class messageViewController: UIViewController {
 
 
 }
-
+*/

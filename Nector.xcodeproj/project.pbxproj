@@ -7,12 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0317F6101DBC3ABB008D07F6 /* messageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0317F60F1DBC3ABB008D07F6 /* messageViewController.swift */; };
-		031851CD1DBD1DD2003982DD /* HexagonLastScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 031851CC1DBD1DD2003982DD /* HexagonLastScreen.png */; };
-		031851CF1DBD1DEC003982DD /* iceCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 031851CE1DBD1DEC003982DD /* iceCube.png */; };
-		031851D11DBD1E16003982DD /* Nexagons.png in Resources */ = {isa = PBXBuildFile; fileRef = 031851D01DBD1E16003982DD /* Nexagons.png */; };
+		030F672D1E0524FF00102E7E /* landingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F672C1E0524FF00102E7E /* landingVC.swift */; };
+		030F672F1E052C1800102E7E /* wordFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F672E1E052C1800102E7E /* wordFeedVC.swift */; };
+		030F67311E05331600102E7E /* matchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F67301E05331600102E7E /* matchVC.swift */; };
 		03859B191DBB423E00B75F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B181DBB423E00B75F77 /* AppDelegate.swift */; };
-		03859B1B1DBB423E00B75F77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B1A1DBB423E00B75F77 /* ViewController.swift */; };
 		03859B1E1DBB423E00B75F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03859B1C1DBB423E00B75F77 /* Main.storyboard */; };
 		03859B211DBB423E00B75F77 /* Bro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */; };
 		03859B231DBB423E00B75F77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03859B221DBB423E00B75F77 /* Assets.xcassets */; };
@@ -21,7 +19,6 @@
 		03859B3C1DBB423F00B75F77 /* BroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B3B1DBB423F00B75F77 /* BroUITests.swift */; };
 		03859B4A1DBB482A00B75F77 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B491DBB482A00B75F77 /* user.swift */; };
 		03859B4C1DBB51BB00B75F77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03859B4B1DBB51BB00B75F77 /* GoogleService-Info.plist */; };
-		038B6CD51DBC71E2003CDEE2 /* resultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 038B6CD41DBC71E2003CDEE2 /* resultViewController.swift */; };
 		3D4F8202BEFF48206FE8C266 /* Pods_BroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48AA1A33F026E7271C4DC067 /* Pods_BroTests.framework */; };
 		4C620804472DC814146A1EA9 /* Pods_Bro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72009979960C2DA67CEC33D3 /* Pods_Bro.framework */; };
 		B3EAAA53677A33B7CB598525 /* Pods_BroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4683FD699FA75E2DEA91A5DE /* Pods_BroUITests.framework */; };
@@ -45,27 +42,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0317F60F1DBC3ABB008D07F6 /* messageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = messageViewController.swift; sourceTree = "<group>"; };
-		031851CC1DBD1DD2003982DD /* HexagonLastScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HexagonLastScreen.png; sourceTree = "<group>"; };
-		031851CE1DBD1DEC003982DD /* iceCube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iceCube.png; sourceTree = "<group>"; };
-		031851D01DBD1E16003982DD /* Nexagons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nexagons.png; sourceTree = "<group>"; };
-		03859B151DBB423E00B75F77 /* Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		030F672C1E0524FF00102E7E /* landingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = landingVC.swift; sourceTree = "<group>"; };
+		030F672E1E052C1800102E7E /* wordFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wordFeedVC.swift; sourceTree = "<group>"; };
+		030F67301E05331600102E7E /* matchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = matchVC.swift; path = ../matchVC.swift; sourceTree = "<group>"; };
+		03859B151DBB423E00B75F77 /* Nector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nector.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B181DBB423E00B75F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03859B1A1DBB423E00B75F77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		03859B1D1DBB423E00B75F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03859B201DBB423E00B75F77 /* Bro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bro.xcdatamodel; sourceTree = "<group>"; };
 		03859B221DBB423E00B75F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03859B251DBB423E00B75F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03859B271DBB423E00B75F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03859B2C1DBB423F00B75F77 /* BroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03859B2C1DBB423F00B75F77 /* NectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B301DBB423F00B75F77 /* BroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroTests.swift; sourceTree = "<group>"; };
 		03859B321DBB423F00B75F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03859B371DBB423F00B75F77 /* BroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03859B371DBB423F00B75F77 /* NectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B3B1DBB423F00B75F77 /* BroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroUITests.swift; sourceTree = "<group>"; };
 		03859B3D1DBB423F00B75F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03859B491DBB482A00B75F77 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
 		03859B4B1DBB51BB00B75F77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		038B6CD41DBC71E2003CDEE2 /* resultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultViewController.swift; sourceTree = "<group>"; };
 		03C59F111DBBF8E9003D52B5 /* Bro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bro.entitlements; sourceTree = "<group>"; };
 		386235C906A21DDB404D39FC /* Pods-BroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BroTests/Pods-BroTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A332ABE78CC45702C66E210 /* Pods-BroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BroTests/Pods-BroTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,9 +103,9 @@
 		03859B0C1DBB423E00B75F77 = {
 			isa = PBXGroup;
 			children = (
-				03859B171DBB423E00B75F77 /* Bro */,
-				03859B2F1DBB423F00B75F77 /* BroTests */,
-				03859B3A1DBB423F00B75F77 /* BroUITests */,
+				03859B171DBB423E00B75F77 /* Nector */,
+				03859B2F1DBB423F00B75F77 /* NectorTests */,
+				03859B3A1DBB423F00B75F77 /* NectorUITests */,
 				03859B161DBB423E00B75F77 /* Products */,
 				F2C467A0A08C1303404B2328 /* Pods */,
 				B1A7F1B5F3BAE93945A4B2EE /* Frameworks */,
@@ -121,50 +115,50 @@
 		03859B161DBB423E00B75F77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03859B151DBB423E00B75F77 /* Bro.app */,
-				03859B2C1DBB423F00B75F77 /* BroTests.xctest */,
-				03859B371DBB423F00B75F77 /* BroUITests.xctest */,
+				03859B151DBB423E00B75F77 /* Nector.app */,
+				03859B2C1DBB423F00B75F77 /* NectorTests.xctest */,
+				03859B371DBB423F00B75F77 /* NectorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		03859B171DBB423E00B75F77 /* Bro */ = {
+		03859B171DBB423E00B75F77 /* Nector */ = {
 			isa = PBXGroup;
 			children = (
 				03C59F111DBBF8E9003D52B5 /* Bro.entitlements */,
-				031851CC1DBD1DD2003982DD /* HexagonLastScreen.png */,
-				031851CE1DBD1DEC003982DD /* iceCube.png */,
-				031851D01DBD1E16003982DD /* Nexagons.png */,
 				03859B181DBB423E00B75F77 /* AppDelegate.swift */,
-				03859B1A1DBB423E00B75F77 /* ViewController.swift */,
 				03859B491DBB482A00B75F77 /* user.swift */,
+				030F672C1E0524FF00102E7E /* landingVC.swift */,
+				030F672E1E052C1800102E7E /* wordFeedVC.swift */,
+				030F67301E05331600102E7E /* matchVC.swift */,
 				03859B1C1DBB423E00B75F77 /* Main.storyboard */,
-				0317F60F1DBC3ABB008D07F6 /* messageViewController.swift */,
 				03859B221DBB423E00B75F77 /* Assets.xcassets */,
 				03859B241DBB423E00B75F77 /* LaunchScreen.storyboard */,
 				03859B271DBB423E00B75F77 /* Info.plist */,
 				03859B4B1DBB51BB00B75F77 /* GoogleService-Info.plist */,
 				03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */,
-				038B6CD41DBC71E2003CDEE2 /* resultViewController.swift */,
 			);
+			name = Nector;
 			path = Bro;
 			sourceTree = "<group>";
 		};
-		03859B2F1DBB423F00B75F77 /* BroTests */ = {
+		03859B2F1DBB423F00B75F77 /* NectorTests */ = {
 			isa = PBXGroup;
 			children = (
 				03859B301DBB423F00B75F77 /* BroTests.swift */,
 				03859B321DBB423F00B75F77 /* Info.plist */,
 			);
+			name = NectorTests;
 			path = BroTests;
 			sourceTree = "<group>";
 		};
-		03859B3A1DBB423F00B75F77 /* BroUITests */ = {
+		03859B3A1DBB423F00B75F77 /* NectorUITests */ = {
 			isa = PBXGroup;
 			children = (
 				03859B3B1DBB423F00B75F77 /* BroUITests.swift */,
 				03859B3D1DBB423F00B75F77 /* Info.plist */,
 			);
+			name = NectorUITests;
 			path = BroUITests;
 			sourceTree = "<group>";
 		};
@@ -194,9 +188,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		03859B141DBB423E00B75F77 /* Bro */ = {
+		03859B141DBB423E00B75F77 /* Nector */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03859B401DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "Bro" */;
+			buildConfigurationList = 03859B401DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "Nector" */;
 			buildPhases = (
 				0C372BB897D9365C2B6B40D8 /* [CP] Check Pods Manifest.lock */,
 				03859B111DBB423E00B75F77 /* Sources */,
@@ -209,14 +203,14 @@
 			);
 			dependencies = (
 			);
-			name = Bro;
+			name = Nector;
 			productName = Bro;
-			productReference = 03859B151DBB423E00B75F77 /* Bro.app */;
+			productReference = 03859B151DBB423E00B75F77 /* Nector.app */;
 			productType = "com.apple.product-type.application";
 		};
-		03859B2B1DBB423F00B75F77 /* BroTests */ = {
+		03859B2B1DBB423F00B75F77 /* NectorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03859B431DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "BroTests" */;
+			buildConfigurationList = 03859B431DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "NectorTests" */;
 			buildPhases = (
 				1E311C67126CEEFA39BF32EA /* [CP] Check Pods Manifest.lock */,
 				03859B281DBB423F00B75F77 /* Sources */,
@@ -230,14 +224,14 @@
 			dependencies = (
 				03859B2E1DBB423F00B75F77 /* PBXTargetDependency */,
 			);
-			name = BroTests;
+			name = NectorTests;
 			productName = BroTests;
-			productReference = 03859B2C1DBB423F00B75F77 /* BroTests.xctest */;
+			productReference = 03859B2C1DBB423F00B75F77 /* NectorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		03859B361DBB423F00B75F77 /* BroUITests */ = {
+		03859B361DBB423F00B75F77 /* NectorUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03859B461DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "BroUITests" */;
+			buildConfigurationList = 03859B461DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "NectorUITests" */;
 			buildPhases = (
 				E12B82689DAC1864E8B7D2F3 /* [CP] Check Pods Manifest.lock */,
 				03859B331DBB423F00B75F77 /* Sources */,
@@ -250,9 +244,9 @@
 			dependencies = (
 				03859B391DBB423F00B75F77 /* PBXTargetDependency */,
 			);
-			name = BroUITests;
+			name = NectorUITests;
 			productName = BroUITests;
-			productReference = 03859B371DBB423F00B75F77 /* BroUITests.xctest */;
+			productReference = 03859B371DBB423F00B75F77 /* NectorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -287,7 +281,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 03859B101DBB423E00B75F77 /* Build configuration list for PBXProject "Bro" */;
+			buildConfigurationList = 03859B101DBB423E00B75F77 /* Build configuration list for PBXProject "Nector" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -300,9 +294,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03859B141DBB423E00B75F77 /* Bro */,
-				03859B2B1DBB423F00B75F77 /* BroTests */,
-				03859B361DBB423F00B75F77 /* BroUITests */,
+				03859B141DBB423E00B75F77 /* Nector */,
+				03859B2B1DBB423F00B75F77 /* NectorTests */,
+				03859B361DBB423F00B75F77 /* NectorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -312,11 +306,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				031851CF1DBD1DEC003982DD /* iceCube.png in Resources */,
-				031851D11DBD1E16003982DD /* Nexagons.png in Resources */,
 				03859B261DBB423E00B75F77 /* LaunchScreen.storyboard in Resources */,
 				03859B4C1DBB51BB00B75F77 /* GoogleService-Info.plist in Resources */,
-				031851CD1DBD1DD2003982DD /* HexagonLastScreen.png in Resources */,
 				03859B231DBB423E00B75F77 /* Assets.xcassets in Resources */,
 				03859B1E1DBB423E00B75F77 /* Main.storyboard in Resources */,
 			);
@@ -467,10 +458,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				03859B4A1DBB482A00B75F77 /* user.swift in Sources */,
-				03859B1B1DBB423E00B75F77 /* ViewController.swift in Sources */,
 				03859B211DBB423E00B75F77 /* Bro.xcdatamodeld in Sources */,
-				038B6CD51DBC71E2003CDEE2 /* resultViewController.swift in Sources */,
-				0317F6101DBC3ABB008D07F6 /* messageViewController.swift in Sources */,
+				030F67311E05331600102E7E /* matchVC.swift in Sources */,
+				030F672F1E052C1800102E7E /* wordFeedVC.swift in Sources */,
+				030F672D1E0524FF00102E7E /* landingVC.swift in Sources */,
 				03859B191DBB423E00B75F77 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -496,12 +487,12 @@
 /* Begin PBXTargetDependency section */
 		03859B2E1DBB423F00B75F77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 03859B141DBB423E00B75F77 /* Bro */;
+			target = 03859B141DBB423E00B75F77 /* Nector */;
 			targetProxy = 03859B2D1DBB423F00B75F77 /* PBXContainerItemProxy */;
 		};
 		03859B391DBB423F00B75F77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 03859B141DBB423E00B75F77 /* Bro */;
+			target = 03859B141DBB423E00B75F77 /* Nector */;
 			targetProxy = 03859B381DBB423F00B75F77 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -669,7 +660,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = HackLAds.BroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bro.app/Bro";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nector.app/Nector";
 			};
 			name = Debug;
 		};
@@ -684,7 +675,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = HackLAds.BroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bro.app/Bro";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nector.app/Nector";
 			};
 			name = Release;
 		};
@@ -719,7 +710,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03859B101DBB423E00B75F77 /* Build configuration list for PBXProject "Bro" */ = {
+		03859B101DBB423E00B75F77 /* Build configuration list for PBXProject "Nector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03859B3E1DBB423F00B75F77 /* Debug */,
@@ -728,7 +719,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03859B401DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "Bro" */ = {
+		03859B401DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "Nector" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03859B411DBB423F00B75F77 /* Debug */,
@@ -737,7 +728,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03859B431DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "BroTests" */ = {
+		03859B431DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "NectorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03859B441DBB423F00B75F77 /* Debug */,
@@ -746,7 +737,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03859B461DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "BroUITests" */ = {
+		03859B461DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "NectorUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03859B471DBB423F00B75F77 /* Debug */,
