@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "03859B141DBB423E00B75F77"
-               BuildableName = "Nector.app"
-               BlueprintName = "Nector"
-               ReferencedContainer = "container:Nector.xcodeproj">
+               BuildableName = "Bro.app"
+               BlueprintName = "Bro"
+               ReferencedContainer = "container:Bro.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "03859B2B1DBB423F00B75F77"
-               BuildableName = "NectorTests.xctest"
-               BlueprintName = "NectorTests"
-               ReferencedContainer = "container:Nector.xcodeproj">
+               BuildableName = "BroTests.xctest"
+               BlueprintName = "BroTests"
+               ReferencedContainer = "container:Bro.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "03859B361DBB423F00B75F77"
-               BuildableName = "NectorUITests.xctest"
-               BlueprintName = "NectorUITests"
-               ReferencedContainer = "container:Nector.xcodeproj">
+               BuildableName = "BroUITests.xctest"
+               BlueprintName = "BroUITests"
+               ReferencedContainer = "container:Bro.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "03859B141DBB423E00B75F77"
-            BuildableName = "Nector.app"
-            BlueprintName = "Nector"
-            ReferencedContainer = "container:Nector.xcodeproj">
+            BuildableName = "Bro.app"
+            BlueprintName = "Bro"
+            ReferencedContainer = "container:Bro.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "03859B141DBB423E00B75F77"
-            BuildableName = "Nector.app"
-            BlueprintName = "Nector"
-            ReferencedContainer = "container:Nector.xcodeproj">
+            BuildableName = "Bro.app"
+            BlueprintName = "Bro"
+            ReferencedContainer = "container:Bro.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <EnvironmentVariables>
@@ -106,9 +106,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "03859B141DBB423E00B75F77"
-            BuildableName = "Nector.app"
-            BlueprintName = "Nector"
-            ReferencedContainer = "container:Nector.xcodeproj">
+            BuildableName = "Bro.app"
+            BlueprintName = "Bro"
+            ReferencedContainer = "container:Bro.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -45,17 +45,17 @@
 		030F672C1E0524FF00102E7E /* landingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = landingVC.swift; sourceTree = "<group>"; };
 		030F672E1E052C1800102E7E /* wordFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wordFeedVC.swift; sourceTree = "<group>"; };
 		030F67301E05331600102E7E /* matchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = matchVC.swift; path = ../matchVC.swift; sourceTree = "<group>"; };
-		03859B151DBB423E00B75F77 /* Nector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		03859B151DBB423E00B75F77 /* Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B181DBB423E00B75F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03859B1D1DBB423E00B75F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03859B201DBB423E00B75F77 /* Bro.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bro.xcdatamodel; sourceTree = "<group>"; };
 		03859B221DBB423E00B75F77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03859B251DBB423E00B75F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03859B271DBB423E00B75F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03859B2C1DBB423F00B75F77 /* NectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03859B2C1DBB423F00B75F77 /* BroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B301DBB423F00B75F77 /* BroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroTests.swift; sourceTree = "<group>"; };
 		03859B321DBB423F00B75F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		03859B371DBB423F00B75F77 /* NectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NectorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		03859B371DBB423F00B75F77 /* BroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B3B1DBB423F00B75F77 /* BroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroUITests.swift; sourceTree = "<group>"; };
 		03859B3D1DBB423F00B75F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03859B491DBB482A00B75F77 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
@@ -115,9 +115,9 @@
 		03859B161DBB423E00B75F77 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				03859B151DBB423E00B75F77 /* Nector.app */,
-				03859B2C1DBB423F00B75F77 /* NectorTests.xctest */,
-				03859B371DBB423F00B75F77 /* NectorUITests.xctest */,
+				03859B151DBB423E00B75F77 /* Bro.app */,
+				03859B2C1DBB423F00B75F77 /* BroTests.xctest */,
+				03859B371DBB423F00B75F77 /* BroUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -185,9 +185,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		03859B141DBB423E00B75F77 /* Nector */ = {
+		03859B141DBB423E00B75F77 /* Bro */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03859B401DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "Nector" */;
+			buildConfigurationList = 03859B401DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "Bro" */;
 			buildPhases = (
 				0C372BB897D9365C2B6B40D8 /* [CP] Check Pods Manifest.lock */,
 				03859B111DBB423E00B75F77 /* Sources */,
@@ -200,14 +200,14 @@
 			);
 			dependencies = (
 			);
-			name = Nector;
+			name = Bro;
 			productName = Bro;
-			productReference = 03859B151DBB423E00B75F77 /* Nector.app */;
+			productReference = 03859B151DBB423E00B75F77 /* Bro.app */;
 			productType = "com.apple.product-type.application";
 		};
-		03859B2B1DBB423F00B75F77 /* NectorTests */ = {
+		03859B2B1DBB423F00B75F77 /* BroTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03859B431DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "NectorTests" */;
+			buildConfigurationList = 03859B431DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "BroTests" */;
 			buildPhases = (
 				1E311C67126CEEFA39BF32EA /* [CP] Check Pods Manifest.lock */,
 				03859B281DBB423F00B75F77 /* Sources */,
@@ -221,14 +221,14 @@
 			dependencies = (
 				03859B2E1DBB423F00B75F77 /* PBXTargetDependency */,
 			);
-			name = NectorTests;
+			name = BroTests;
 			productName = BroTests;
-			productReference = 03859B2C1DBB423F00B75F77 /* NectorTests.xctest */;
+			productReference = 03859B2C1DBB423F00B75F77 /* BroTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		03859B361DBB423F00B75F77 /* NectorUITests */ = {
+		03859B361DBB423F00B75F77 /* BroUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03859B461DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "NectorUITests" */;
+			buildConfigurationList = 03859B461DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "BroUITests" */;
 			buildPhases = (
 				E12B82689DAC1864E8B7D2F3 /* [CP] Check Pods Manifest.lock */,
 				03859B331DBB423F00B75F77 /* Sources */,
@@ -241,9 +241,9 @@
 			dependencies = (
 				03859B391DBB423F00B75F77 /* PBXTargetDependency */,
 			);
-			name = NectorUITests;
+			name = BroUITests;
 			productName = BroUITests;
-			productReference = 03859B371DBB423F00B75F77 /* NectorUITests.xctest */;
+			productReference = 03859B371DBB423F00B75F77 /* BroUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -278,7 +278,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 03859B101DBB423E00B75F77 /* Build configuration list for PBXProject "Nector" */;
+			buildConfigurationList = 03859B101DBB423E00B75F77 /* Build configuration list for PBXProject "Bro" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -291,9 +291,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03859B141DBB423E00B75F77 /* Nector */,
-				03859B2B1DBB423F00B75F77 /* NectorTests */,
-				03859B361DBB423F00B75F77 /* NectorUITests */,
+				03859B141DBB423E00B75F77 /* Bro */,
+				03859B2B1DBB423F00B75F77 /* BroTests */,
+				03859B361DBB423F00B75F77 /* BroUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -484,12 +484,12 @@
 /* Begin PBXTargetDependency section */
 		03859B2E1DBB423F00B75F77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 03859B141DBB423E00B75F77 /* Nector */;
+			target = 03859B141DBB423E00B75F77 /* Bro */;
 			targetProxy = 03859B2D1DBB423F00B75F77 /* PBXContainerItemProxy */;
 		};
 		03859B391DBB423F00B75F77 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 03859B141DBB423E00B75F77 /* Nector */;
+			target = 03859B141DBB423E00B75F77 /* Bro */;
 			targetProxy = 03859B381DBB423F00B75F77 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -657,7 +657,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = HackLAds.BroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nector.app/Nector";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bro.app/Bro";
 			};
 			name = Debug;
 		};
@@ -672,7 +672,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = HackLAds.BroTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nector.app/Nector";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bro.app/Bro";
 			};
 			name = Release;
 		};
@@ -707,7 +707,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03859B101DBB423E00B75F77 /* Build configuration list for PBXProject "Nector" */ = {
+		03859B101DBB423E00B75F77 /* Build configuration list for PBXProject "Bro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03859B3E1DBB423F00B75F77 /* Debug */,
@@ -716,7 +716,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03859B401DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "Nector" */ = {
+		03859B401DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "Bro" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03859B411DBB423F00B75F77 /* Debug */,
@@ -725,7 +725,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03859B431DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "NectorTests" */ = {
+		03859B431DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "BroTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03859B441DBB423F00B75F77 /* Debug */,
@@ -734,7 +734,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		03859B461DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "NectorUITests" */ = {
+		03859B461DBB423F00B75F77 /* Build configuration list for PBXNativeTarget "BroUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				03859B471DBB423F00B75F77 /* Debug */,
