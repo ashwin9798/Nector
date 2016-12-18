@@ -1,10 +1,6 @@
-//
 //  landingVC.swift
-//  Bro
-//
-//  Created by Sachin Saxena on 12/17/16.
 //  Copyright © 2016 HackLAds. All rights reserved.
-//
+//  Nector
 
 import UIKit
 import Firebase
@@ -60,11 +56,11 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
             self.label2.alpha = 1
         })
         
-        UIView.animate(withDuration: 1.5, delay: 4.2, animations: {
+        UIView.animate(withDuration: 1.5, delay: 3.2, animations: {
             self.iceCube.alpha = 1
         })
         
-        UIView.animate(withDuration: 1.5, delay: 5.4, animations: {
+        UIView.animate(withDuration: 1.5, delay: 4.4, animations: {
             self.label3.alpha = 1
         })
 
@@ -124,12 +120,13 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "toWordFeed"){
-            //let DestViewController = segue.destination as! UINavigationController
+
             let MessageData = segue.destination as! wordFeedVC
             
             MessageData.ArrayOfWords.append(textField.text!)
             MessageData.ArrayOfKeys.append(keys)
-            MessageData.UserKey = keys
+            
+            //MessageData.UserKey = keys
             //MessageData.count = counter
         }
     }

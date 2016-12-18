@@ -12,7 +12,7 @@
         <!--LandingVC-->
         <scene sceneID="oTC-Iv-HL2">
             <objects>
-                <viewController id="Rc6-8o-sxC" customClass="landingVC" customModule="Nector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rc6-8o-sxC" customClass="landingVC" customModule="Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ta5-tq-hlC"/>
                         <viewControllerLayoutGuide type="bottom" id="MrC-yM-cKb"/>
@@ -77,7 +77,7 @@
         <!--Word FeedVC-->
         <scene sceneID="uHs-Bm-WtT">
             <objects>
-                <viewController id="phe-HG-knJ" customClass="wordFeedVC" customModule="Nector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="phe-HG-knJ" customClass="wordFeedVC" customModule="Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="boI-Dl-xQV"/>
                         <viewControllerLayoutGuide type="bottom" id="mAY-u6-wed"/>
@@ -102,6 +102,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99013745060000002" green="0.7751598126" blue="0.033500989439999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="GbZ-Vd-Iat" appends="YES" id="0gl-zE-mpl"/>
+                        </connections>
                     </scrollView>
                     <navigationItem key="navigationItem" id="5bz-9J-dfb"/>
                     <value key="contentSizeForViewInPopover" type="size" width="375" height="667"/>
@@ -115,13 +119,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FqF-02-rLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="GbZ-Vd-Iat">
+                    <connections>
+                        <segue destination="Rc6-8o-sxC" kind="show" id="tlT-jo-pmV"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-214" y="-394"/>
         </scene>
         <!--MatchVC-->
         <scene sceneID="myL-N3-Qvo">
             <objects>
-                <viewController id="lVq-ge-PGG" customClass="matchVC" customModule="Nector" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lVq-ge-PGG" customClass="matchVC" customModule="Bro" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="apQ-gN-Fs9"/>
                         <viewControllerLayoutGuide type="bottom" id="tHK-NS-347"/>
@@ -138,10 +147,14 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.99013745060000002" green="0.7751598126" blue="0.033500989439999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="t5L-Hk-pEV" firstAttribute="centerX" secondItem="7Nn-bi-5ds" secondAttribute="centerX" id="QZB-pu-gqC"/>
                             <constraint firstItem="t5L-Hk-pEV" firstAttribute="centerY" secondItem="7Nn-bi-5ds" secondAttribute="centerY" id="qUp-HI-EeY"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="rd1-me-pod" appends="YES" id="kP2-0r-wk6"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="L8Z-9j-c4G"/>
                     <connections>
@@ -149,6 +162,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="duc-Lf-St2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="rd1-me-pod">
+                    <connections>
+                        <segue destination="Rc6-8o-sxC" kind="show" id="Qvn-Ke-hjv"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="463" y="-394"/>
         </scene>
@@ -156,4 +174,7 @@
     <resources>
         <image name="iceCube" width="145" height="133"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tlT-jo-pmV"/>
+    </inferredMetricsTieBreakers>
 </document>

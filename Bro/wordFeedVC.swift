@@ -1,10 +1,26 @@
-//
 //  wordFeedVC.swift
-//  Bro
-//
-//  Created by Sachin Saxena on 12/17/16.
 //  Copyright © 2016 HackLAds. All rights reserved.
-//
+//  Nector
+
+// ******** TO DO ************
+
+//  1.
+//  FIX CRASH ON LINE 256 (Array out of bounds exception):
+//  You swipe left to delete your entry from other user's feeds. Then, you input a new word: their feed page crashes. Backend works correct.
+
+//  2.
+//  Display error labels when feed has no words, esp. when children have been removed to empty the feed
+//  HOW: self.err(state: true)
+//  PROBLEM: Where to call the function? (how to check the feed is empty, given Firebase listeners are asynchronous?)
+
+// ********************
+
+/*
+
+ Whenever you segue out of this VC (forward for a match or back by swiping), the child at keys i.e. the user's child is removed from firebase. This is the last override function in the class.
+ I think the ArrayOfButtons[] needs to be rotated left or something, to stop the crash above.
+ 
+*/
 
 import UIKit
 import Firebase
@@ -18,18 +34,16 @@ class wordFeedVC: UIViewController {
     var ArrayOfWords = [String]()
     var ArrayOfKeys = [String]()
     var count = 0
-    var UserKey: String = ""
     var height: Int = 0
     var ArrayOfButtons = [UIButton]()
     var ArrayOfColors = [UIColor.black, UIColor.blue, UIColor.cyan, UIColor.gray, UIColor.green, UIColor.orange, UIColor.purple, UIColor.red]
     
     
     var whichButtonDeleted: Int = 0
-    var whichButtonDeleted1:Int = 0
-    
     var whichButtonEmpty: Int = 0
     var buttonIsEmpty: Bool = false
     var colorGenerated: Int = 0
+    
     
     var ref: FIRDatabaseReference = FIRDatabase.database().reference()
     var myRef: FIRDatabaseReference = FIRDatabase.database().reference().child(keys).child("selected")
@@ -42,9 +56,9 @@ class wordFeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        err(state: true)
+        
         ref.observe(.childAdded, with: {(snapshot) in
-            
-            let myKey = snapshot.key
             
             let user = userObject(snapshot: snapshot)
             
@@ -52,13 +66,16 @@ class wordFeedVC: UIViewController {
             
             if userMessage != nil{
                 
-                if(myKey != self.UserKey)// && self.withinRadius(lat1: user.lat, lon1: user.long, lat2: latitude, lon2: longitude, rad: 50))
+                if(user.key != keys && self.withinRadius(lat1: user.lat, lon1: user.long, lat2: latitude, lon2: longitude, rad: 25))
                 {
+                    
+                    self.err(state: false)
+                    
                     for index in 0...self.ArrayOfKeys.count-1{
                         if (self.ArrayOfKeys[index] == "0"){
                             self.whichButtonEmpty = index;
                             self.buttonIsEmpty = true
-                            self.ArrayOfKeys[index] = myKey
+                            self.ArrayOfKeys[index] = user.key
                             self.ArrayOfWords[index] = userMessage!
                             break
                         }
@@ -66,7 +83,7 @@ class wordFeedVC: UIViewController {
                     
                     if(!self.buttonIsEmpty){
                         self.ArrayOfWords.append(userMessage!)
-                        self.ArrayOfKeys.append(myKey)
+                        self.ArrayOfKeys.append(user.key)
                     }
                     
                     if (self.whichButtonEmpty != 0){
@@ -124,12 +141,13 @@ class wordFeedVC: UIViewController {
         
         ref.observe(.childRemoved, with: {(snapshot) in
             
-            let matchedUserKey = snapshot.key
+            let user = userObject(snapshot: snapshot)
             
-            if matchedUserKey != self.UserKey {
+            if user.key != keys && self.withinRadius(lat1: user.lat, lon1: user.long, lat2: latitude, lon2: longitude, rad: 25)
+            {
                 
                 for index in 0...self.ArrayOfKeys.count-1{
-                    if(matchedUserKey == self.ArrayOfKeys[index]){
+                    if(user.key == self.ArrayOfKeys[index]){
                         
                         let buttonToDelete = self.ArrayOfButtons[index-1]
                         buttonToDelete.removeFromSuperview()
@@ -200,7 +218,7 @@ class wordFeedVC: UIViewController {
                     displayMessage = self.ArrayOfWords[0]
                     
                     self.performSegue(withIdentifier: "toMatch", sender: Any?.self)
-                    self.ref.child(self.UserKey).removeValue()
+                    self.ref.child(keys).removeValue()
                     
                 }
                 else
@@ -240,7 +258,6 @@ class wordFeedVC: UIViewController {
         else{
             button.tag = self.count
             ArrayOfButtons.append(button)
-            
         }
         
     }
@@ -261,7 +278,7 @@ class wordFeedVC: UIViewController {
                 ref.child(key).child("match").setValue("\(self.colorGenerated)")
                 ref.child(key).child("selected").setValue(true)
                 //ref.child(self.UserKey).child("match").setValue("\(self.colorGenerated)")
-                ref.child(self.UserKey).removeValue()
+                ref.child(keys).removeValue()
                 performSegue(withIdentifier: "toMatch", sender: Any?.self)
             }
         }
@@ -292,7 +309,10 @@ class wordFeedVC: UIViewController {
         let d = R * c;
         
         print ("Distance: \(d*1000)")
-        return (d*1000 < rad)
+        
+        return true // EASY TESTING
+        
+        //return (d*1000 < rad)
     }
     
     func toRad(degrees: Double) -> Double
@@ -300,14 +320,20 @@ class wordFeedVC: UIViewController {
         return degrees * 22/7/180
     }
     
-
-
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        // Remove Firebase Observers
         
+        self.ref.child(keys).removeValue()
+
+        // Remove Firebase Observers
         ref.removeAllObservers()
         myRef.removeAllObservers()
+    }
+    
+    func err(state: Bool)
+    {
+        errLabel1.isHidden = !state
+        errLabel2.isHidden = !state
     }
 
     /*
