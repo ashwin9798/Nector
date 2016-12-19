@@ -8,6 +8,8 @@
 //  FIX CRASH ON LINE 256 (Array out of bounds exception):
 //  You swipe left to delete your entry from other user's feeds. Then, you input a new word: their feed page crashes. Backend works correct.
 
+/******* RESOLVED ^^^^ ********/
+
 //  2.
 //  Display error labels when feed has no words, esp. when children have been removed to empty the feed
 //  HOW: self.err(state: true)
@@ -15,12 +17,6 @@
 
 // ********************
 
-/*
-
- Whenever you segue out of this VC (forward for a match or back by swiping), the child at keys i.e. the user's child is removed from firebase. This is the last override function in the class.
- I think the ArrayOfButtons[] needs to be rotated left or something, to stop the crash above.
- 
-*/
 
 import UIKit
 import Firebase
@@ -52,6 +48,7 @@ class wordFeedVC: UIViewController {
     
     @IBOutlet var errLabel1: UILabel!
     @IBOutlet var errLabel2: UILabel!
+    @IBOutlet weak var inProgressAnimation: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,18 +86,18 @@ class wordFeedVC: UIViewController {
                     if (self.whichButtonEmpty != 0){
                         switch(self.whichColumn(argument: self.whichButtonEmpty)){
                         case 1:
-                            self.createButton(xPos: 9, yPos: (((((self.whichButtonEmpty+1)/3)-1)*131)+15), message: userMessage!);
+                            self.createButton(xPos: 9, yPos: (((((self.whichButtonEmpty+1)/3)-1)*131)+90), message: userMessage!);
                             
                             self.height = (((((self.count+3)/4)-1)*266)+13) + 110;
                             break
                         case 2:
-                            self.createButton(xPos: 117, yPos: ((((self.whichButtonEmpty+2/3)-1)*131)+80), message: userMessage!);
+                            self.createButton(xPos: 117, yPos: (((((self.whichButtonEmpty+2)/3)-1)*131)+25), message: userMessage!);
                             
                             self.height = ((((self.count/2)-1)*130)+81) + 110
                             break
                         case 3:
-                            self.createButton(xPos: 225, yPos: (((((self.whichButtonEmpty)/3)-1)*131)+144), message: userMessage!);
-                            self.height = (((((self.count+1)/4)-1)*131)+145) + 110
+                            self.createButton(xPos: 225, yPos: (((((self.whichButtonEmpty)/3)-1)*131)+90), message: userMessage!);
+                            self.height = (((((self.count+1)/4)-1)*131)+80) + 110
                             break
                         default:
                             break
@@ -113,17 +110,17 @@ class wordFeedVC: UIViewController {
                         
                         switch(self.whichColumn(argument: self.count)){
                         case 1:
-                            self.createButton(xPos: 9, yPos: (((((self.count+1)/3)-1)*131)+80), message: userMessage!);
+                            self.createButton(xPos: 9, yPos: (((((self.count+1)/3)-1)*131)+90), message: userMessage!);
                             
                             self.height = (((((self.count+3)/4)-1)*266)+13) + 110;
                             break
                         case 2:
-                            self.createButton(xPos: 117, yPos: (((((self.count+2)/3)-1)*131)+15), message: userMessage!);
+                            self.createButton(xPos: 117, yPos: (((((self.count+2)/3)-1)*131)+25), message: userMessage!);
                             
                             self.height = ((((self.count/2)-1)*130)+81) + 110
                             break
                         case 3:
-                            self.createButton(xPos: 225, yPos: (((((self.count)/3)-1)*131)+80), message: userMessage!);
+                            self.createButton(xPos: 225, yPos: (((((self.count)/3)-1)*131)+90), message: userMessage!);
                             self.height = (((((self.count+1)/4)-1)*266)+145) + 110
                             break
                         default:
@@ -253,7 +250,7 @@ class wordFeedVC: UIViewController {
         
         if(self.buttonIsEmpty == true){
             button.tag = self.whichButtonEmpty
-            ArrayOfButtons[self.whichButtonEmpty] = button
+            ArrayOfButtons[self.whichButtonEmpty-1] = button
         }
         else{
             button.tag = self.count
@@ -304,7 +301,10 @@ class wordFeedVC: UIViewController {
         let lat1 = toRad(degrees: lat1);
         let lat2 = toRad(degrees: lat2);
         
-        let a = sin(dLat/2) * sin(dLat/2) + sin(dLon/2) * sin(dLon/2) * cos(lat1) * cos(lat2);
+        let b = (sin(dLon/2) * sin(dLon/2))
+        let b1 = cos(lat1) * cos(lat2)
+        let b2 = (sin(dLat/2) * sin(dLat/2))
+        let a = b + b1 + b2
         let c = 2 * atan2(sqrt(a), sqrt(1-a));
         let d = R * c;
         
@@ -334,16 +334,11 @@ class wordFeedVC: UIViewController {
     {
         errLabel1.isHidden = !state
         errLabel2.isHidden = !state
+        if (state){
+            inProgressAnimation.startAnimating()
+        }
+        else{
+            inProgressAnimation.stopAnimating()
+        }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

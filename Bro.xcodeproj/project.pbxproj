@@ -259,7 +259,7 @@
 				TargetAttributes = {
 					03859B141DBB423E00B75F77 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = A3WW4ML98X;
+						DevelopmentTeam = L8TS8ZKSQT;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -631,7 +631,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = Bro/Bro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = A3WW4ML98X;
+				DEVELOPMENT_TEAM = L8TS8ZKSQT;
 				INFOPLIST_FILE = Bro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -651,7 +651,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bro/Bro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = A3WW4ML98X;
+				DEVELOPMENT_TEAM = L8TS8ZKSQT;
 				INFOPLIST_FILE = Bro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
