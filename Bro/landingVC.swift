@@ -10,8 +10,8 @@ import AudioToolbox
 var keys = ""
 var displayMessage = ""
 
-var latitude:CLLocationDegrees = 0.0
-var longitude:CLLocationDegrees = 0.0
+var latitude:CLLocationDegrees = 5.0
+var longitude:CLLocationDegrees = 5.0
 
 class landingVC: UIViewController, CLLocationManagerDelegate {
     
@@ -29,6 +29,7 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
     let whitespace = NSCharacterSet.whitespaces
     let manager = CLLocationManager()
 
+    var existingUsers = [userObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +37,10 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
         ref = FIRDatabase.database().reference()
         
         manager.delegate = self
+        manager.requestWhenInUseAuthorization()
         manager.requestLocation()
         
-        textField.center.x  -= ViewControllerView.bounds.width
+        /*textField.center.x  -= ViewControllerView.bounds.width
         self.label1.alpha = 0
         self.label2.alpha = 0
         self.iceCube.alpha = 0
@@ -62,19 +64,27 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
         
         UIView.animate(withDuration: 1.5, delay: 4.4, animations: {
             self.label3.alpha = 1
-        })
+        })*/
 
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
+        //if let location = locations.first {
             
-            latitude = location.coordinate.latitude
-            longitude = location.coordinate.longitude
-            print("Found user's lat: \(location.coordinate.latitude)")
-            print("Found user's long: \(location.coordinate.longitude)")
+            for location in locations
+            {
+                if latitude != 0 && longitude != 0
+                {
+                    print("Found user's lat: \(location.coordinate.latitude)")
+                    print("Found user's long: \(location.coordinate.longitude)")
+                    
+                    latitude = location.coordinate.latitude
+                    longitude = location.coordinate.longitude
+                    break
+                }
+            }
+
         }
-    }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Failed to find user's location: \(error.localizedDescription)")
@@ -85,21 +95,24 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
         let range = textField.text?.rangeOfCharacter(from: whitespace)
         
         if(textField.text?.characters.count == 0){
-            
-            label3.text = "You forgot to enter a word"
+            createAlert(title: "Ffs...", message: "You forgot to enter a word", result: "Oops")
         }
             
         else if(range != nil){
-
-            label3.text = "Only one word, please"
+            createAlert(title: "Hmm...", message: "Only one word, please", result: "Oops")
         }
             
-        else{
+        else if latitude == 5.0 && longitude == 5.0
+        {
+            createAlert(title: "Ffs...", message: "Can't get your location", result: "Try Again")
+        }
             
+        else
+        {
             keys = ref.childByAutoId().key
             
             displayMessage = textField.text!
-            
+           
             let user = userObject(key: keys, message: textField.text!, match: "", lat: latitude, long: longitude, selected: false)
             
             let childUpdates = ["/\(keys)/" : user.getSnapshotValue()]
@@ -135,5 +148,16 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
         
         textField.resignFirstResponder()
         
+    }
+    
+    func createAlert(title: String, message: String, result: String)
+    {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        // add an action (button)
+        alert.addAction(UIAlertAction(title: result, style: UIAlertActionStyle.default, handler: nil))
+        
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
 }

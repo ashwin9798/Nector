@@ -48,7 +48,7 @@ class wordFeedVC: UIViewController {
     
     @IBOutlet var errLabel1: UILabel!
     @IBOutlet var errLabel2: UILabel!
-    @IBOutlet weak var inProgressAnimation: UIActivityIndicatorView!
+    //@IBOutlet weak var inProgressAnimation: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +63,7 @@ class wordFeedVC: UIViewController {
             
             if userMessage != nil{
                 
-                if(user.key != keys && self.withinRadius(lat1: user.lat, lon1: user.long, lat2: latitude, lon2: longitude, rad: 25))
+                if(user.key != keys && self.withinRadius(latx1: user.lat, lonx1: user.long, latx2: latitude, lonx2: longitude, rad: 35))
                 {
                     
                     self.err(state: false)
@@ -140,7 +140,7 @@ class wordFeedVC: UIViewController {
             
             let user = userObject(snapshot: snapshot)
             
-            if user.key != keys && self.withinRadius(lat1: user.lat, lon1: user.long, lat2: latitude, lon2: longitude, rad: 25)
+            if user.key != keys && self.withinRadius(latx1: user.lat, lonx1: user.long, latx2: latitude, lonx2: longitude, rad: 25)
             {
                 
                 for index in 0...self.ArrayOfKeys.count-1{
@@ -293,26 +293,33 @@ class wordFeedVC: UIViewController {
         return 1
     }
     
-    func withinRadius(lat1: Double, lon1: Double, lat2: Double, lon2: Double, rad: Double) -> Bool
+    func withinRadius(latx1: Double, lonx1: Double, latx2: Double, lonx2: Double, rad: Double) -> Bool
     {
         let R = 6371.0; // km
+        
+        // Rounding coordinates to 4 D.P. EXPERIMENTAL...
+        
+        var lat1 = round(latx1*10000)/10000
+        var lat2 = round(latx2*10000)/10000
+        let lon1 = round(lonx1*10000)/10000
+        let lon2 = round(lonx2*10000)/10000
+        
+        print ("Rounded Lat 1 = \(lat1)")
+        
         let dLat = toRad(degrees: lat2-lat1);
         let dLon = toRad(degrees: lon2-lon1);
-        let lat1 = toRad(degrees: lat1);
-        let lat2 = toRad(degrees: lat2);
+        lat1 = toRad(degrees: lat1);
+        lat2 = toRad(degrees: lat2);
         
-        let b = (sin(dLon/2) * sin(dLon/2))
-        let b1 = cos(lat1) * cos(lat2)
-        let b2 = (sin(dLat/2) * sin(dLat/2))
-        let a = b + b1 + b2
+        let a = sin(dLat/2) * sin(dLat/2) + sin(dLon/2) * sin(dLon/2) * cos(lat1) * cos(lat2);
         let c = 2 * atan2(sqrt(a), sqrt(1-a));
         let d = R * c;
         
-        print ("Distance: \(d*1000)")
+        print ("Distance: \(d*1000) meters.")
         
-        return true // EASY TESTING
+        //return true // EASY TESTING
         
-        //return (d*1000 < rad)
+        return (d*1000 < rad)
     }
     
     func toRad(degrees: Double) -> Double
@@ -334,11 +341,12 @@ class wordFeedVC: UIViewController {
     {
         errLabel1.isHidden = !state
         errLabel2.isHidden = !state
-        if (state){
+        /*if (state){
             inProgressAnimation.startAnimating()
         }
         else{
             inProgressAnimation.stopAnimating()
-        }
+        }*/
     }
+    
 }
