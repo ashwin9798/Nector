@@ -7,21 +7,19 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>984239981158-nh9u7s3aajmjs4ma81bmi0vk5ieqsm8e.apps.googleusercontent.com</string>
+	<string>904740325489-pa4h5ek7ofmcqu1qttlfcrp7mh06t0ri.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.984239981158-nh9u7s3aajmjs4ma81bmi0vk5ieqsm8e</string>
-	<key>API_KEY</key>
-	<string>AIzaSyCLIU87skTBwx0oVYRsXJ_iq3WoLXUIRPU</string>
+	<string>com.googleusercontent.apps.904740325489-pa4h5ek7ofmcqu1qttlfcrp7mh06t0ri</string>
 	<key>GCM_SENDER_ID</key>
-	<string>984239981158</string>
+	<string>904740325489</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>HackLAds.Bro</string>
 	<key>PROJECT_ID</key>
-	<string>broapp-97a6c</string>
+	<string>nector-34720</string>
 	<key>STORAGE_BUCKET</key>
-	<string>broapp-97a6c.appspot.com</string>
+	<string>nector-34720.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +31,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:984239981158:ios:d09e224b7adb76b1</string>
+	<string>1:904740325489:ios:d09e224b7adb76b1</string>
 	<key>DATABASE_URL</key>
-	<string>https://broapp-97a6c.firebaseio.com</string>
+	<string>https://nector-34720.firebaseio.com</string>
 </dict>
 </plist>

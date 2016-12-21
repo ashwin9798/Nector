@@ -18,9 +18,9 @@
 		03859B311DBB423F00B75F77 /* BroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B301DBB423F00B75F77 /* BroTests.swift */; };
 		03859B3C1DBB423F00B75F77 /* BroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B3B1DBB423F00B75F77 /* BroUITests.swift */; };
 		03859B4A1DBB482A00B75F77 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B491DBB482A00B75F77 /* user.swift */; };
-		03859B4C1DBB51BB00B75F77 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03859B4B1DBB51BB00B75F77 /* GoogleService-Info.plist */; };
 		3D4F8202BEFF48206FE8C266 /* Pods_BroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48AA1A33F026E7271C4DC067 /* Pods_BroTests.framework */; };
 		4C620804472DC814146A1EA9 /* Pods_Bro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72009979960C2DA67CEC33D3 /* Pods_Bro.framework */; };
+		774EBEC31E0AAE4500D3362A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */; };
 		B3EAAA53677A33B7CB598525 /* Pods_BroUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4683FD699FA75E2DEA91A5DE /* Pods_BroUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,6 @@
 		03859B3B1DBB423F00B75F77 /* BroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroUITests.swift; sourceTree = "<group>"; };
 		03859B3D1DBB423F00B75F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03859B491DBB482A00B75F77 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
-		03859B4B1DBB51BB00B75F77 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		03C59F111DBBF8E9003D52B5 /* Bro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bro.entitlements; sourceTree = "<group>"; };
 		386235C906A21DDB404D39FC /* Pods-BroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BroTests/Pods-BroTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A332ABE78CC45702C66E210 /* Pods-BroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BroTests/Pods-BroTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -67,6 +66,7 @@
 		48AA1A33F026E7271C4DC067 /* Pods_BroTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BroTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EB2D29EEA5BC5237489F009 /* Pods-BroUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BroUITests/Pods-BroUITests.release.xcconfig"; sourceTree = "<group>"; };
 		72009979960C2DA67CEC33D3 /* Pods_Bro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		896AD90E90206FE92CDB31F5 /* Pods-Bro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bro/Pods-Bro.debug.xcconfig"; sourceTree = "<group>"; };
 		B5C05AE2E36E8976F985C44C /* Pods-Bro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bro/Pods-Bro.release.xcconfig"; sourceTree = "<group>"; };
 		BC94FF380B00F9C7C46F6A32 /* Pods-BroUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BroUITests/Pods-BroUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +127,7 @@
 			children = (
 				03C59F111DBBF8E9003D52B5 /* Bro.entitlements */,
 				03859B181DBB423E00B75F77 /* AppDelegate.swift */,
+				774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */,
 				03859B491DBB482A00B75F77 /* user.swift */,
 				030F672C1E0524FF00102E7E /* landingVC.swift */,
 				030F672E1E052C1800102E7E /* wordFeedVC.swift */,
@@ -135,7 +136,6 @@
 				03859B221DBB423E00B75F77 /* Assets.xcassets */,
 				03859B241DBB423E00B75F77 /* LaunchScreen.storyboard */,
 				03859B271DBB423E00B75F77 /* Info.plist */,
-				03859B4B1DBB51BB00B75F77 /* GoogleService-Info.plist */,
 				03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */,
 			);
 			path = Bro;
@@ -304,8 +304,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				774EBEC31E0AAE4500D3362A /* GoogleService-Info.plist in Resources */,
 				03859B261DBB423E00B75F77 /* LaunchScreen.storyboard in Resources */,
-				03859B4C1DBB51BB00B75F77 /* GoogleService-Info.plist in Resources */,
 				03859B231DBB423E00B75F77 /* Assets.xcassets in Resources */,
 				03859B1E1DBB423E00B75F77 /* Main.storyboard in Resources */,
 			);
