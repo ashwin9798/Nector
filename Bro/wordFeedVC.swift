@@ -48,7 +48,7 @@ class wordFeedVC: UIViewController {
     
     @IBOutlet var errLabel1: UILabel!
     @IBOutlet var errLabel2: UILabel!
-    //@IBOutlet weak var inProgressAnimation: UIActivityIndicatorView!
+    @IBOutlet weak var inProgressAnimation: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -311,7 +311,9 @@ class wordFeedVC: UIViewController {
         lat1 = toRad(degrees: lat1);
         lat2 = toRad(degrees: lat2);
         
-        let a = sin(dLat/2) * sin(dLat/2) + sin(dLon/2) * sin(dLon/2) * cos(lat1) * cos(lat2);
+        let a1 = sin(dLat/2) * sin(dLat/2);
+        let a2 = sin(dLon/2) * sin(dLon/2) * cos(lat1) * cos(lat2)
+        let a = a1 + a2
         let c = 2 * atan2(sqrt(a), sqrt(1-a));
         let d = R * c;
         
@@ -341,12 +343,13 @@ class wordFeedVC: UIViewController {
     {
         errLabel1.isHidden = !state
         errLabel2.isHidden = !state
-        /*if (state){
+        if (state){
             inProgressAnimation.startAnimating()
         }
         else{
+            inProgressAnimation.isHidden = !state
             inProgressAnimation.stopAnimating()
-        }*/
+        }
     }
     
 }
