@@ -30,10 +30,10 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
     let manager = CLLocationManager()
 
     var existingUsers = [userObject]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         ref = FIRDatabase.database().reference()
         
         manager.delegate = self
@@ -95,7 +95,7 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
         let range = textField.text?.rangeOfCharacter(from: whitespace)
         
         if(textField.text?.characters.count == 0){
-            createAlert(title: "Ffs...", message: "You forgot to enter a word", result: "Oops")
+            createAlert(title: "Noob...", message: "You forgot to enter a word", result: "Oops")
         }
             
         else if(range != nil){

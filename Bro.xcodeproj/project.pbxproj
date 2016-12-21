@@ -18,6 +18,8 @@
 		03859B311DBB423F00B75F77 /* BroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B301DBB423F00B75F77 /* BroTests.swift */; };
 		03859B3C1DBB423F00B75F77 /* BroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B3B1DBB423F00B75F77 /* BroUITests.swift */; };
 		03859B4A1DBB482A00B75F77 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B491DBB482A00B75F77 /* user.swift */; };
+		039EB0721E0ACB6800844576 /* hex-loader2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 039EB0701E0ACB6800844576 /* hex-loader2.gif */; };
+		039EB0731E0ACB6800844576 /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = 039EB0711E0ACB6800844576 /* load.gif */; };
 		3D4F8202BEFF48206FE8C266 /* Pods_BroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48AA1A33F026E7271C4DC067 /* Pods_BroTests.framework */; };
 		4C620804472DC814146A1EA9 /* Pods_Bro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72009979960C2DA67CEC33D3 /* Pods_Bro.framework */; };
 		774EBEC31E0AAE4500D3362A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */; };
@@ -59,6 +61,8 @@
 		03859B3B1DBB423F00B75F77 /* BroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroUITests.swift; sourceTree = "<group>"; };
 		03859B3D1DBB423F00B75F77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03859B491DBB482A00B75F77 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		039EB0701E0ACB6800844576 /* hex-loader2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "hex-loader2.gif"; sourceTree = "<group>"; };
+		039EB0711E0ACB6800844576 /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = load.gif; sourceTree = "<group>"; };
 		03C59F111DBBF8E9003D52B5 /* Bro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bro.entitlements; sourceTree = "<group>"; };
 		386235C906A21DDB404D39FC /* Pods-BroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BroTests/Pods-BroTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A332ABE78CC45702C66E210 /* Pods-BroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BroTests/Pods-BroTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 		03859B171DBB423E00B75F77 /* Bro */ = {
 			isa = PBXGroup;
 			children = (
+				039EB0701E0ACB6800844576 /* hex-loader2.gif */,
+				039EB0711E0ACB6800844576 /* load.gif */,
 				03C59F111DBBF8E9003D52B5 /* Bro.entitlements */,
 				03859B181DBB423E00B75F77 /* AppDelegate.swift */,
 				774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */,
@@ -259,7 +265,7 @@
 				TargetAttributes = {
 					03859B141DBB423E00B75F77 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L8TS8ZKSQT;
+						DevelopmentTeam = A3WW4ML98X;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -306,7 +312,9 @@
 			files = (
 				774EBEC31E0AAE4500D3362A /* GoogleService-Info.plist in Resources */,
 				03859B261DBB423E00B75F77 /* LaunchScreen.storyboard in Resources */,
+				039EB0721E0ACB6800844576 /* hex-loader2.gif in Resources */,
 				03859B231DBB423E00B75F77 /* Assets.xcassets in Resources */,
+				039EB0731E0ACB6800844576 /* load.gif in Resources */,
 				03859B1E1DBB423E00B75F77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -633,7 +641,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				CODE_SIGN_ENTITLEMENTS = Bro/Bro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				DEVELOPMENT_TEAM = L8TS8ZKSQT;
+				DEVELOPMENT_TEAM = A3WW4ML98X;
 				INFOPLIST_FILE = Bro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -653,7 +661,7 @@
 				CODE_SIGN_ENTITLEMENTS = Bro/Bro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = L8TS8ZKSQT;
+				DEVELOPMENT_TEAM = A3WW4ML98X;
 				INFOPLIST_FILE = Bro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

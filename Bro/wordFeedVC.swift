@@ -52,8 +52,7 @@ class wordFeedVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        err(state: true)
+               err(state: true)
         
         ref.observe(.childAdded, with: {(snapshot) in
             
@@ -305,6 +304,7 @@ class wordFeedVC: UIViewController {
         let lon2 = round(lonx2*10000)/10000
         
         print ("Rounded Lat 1 = \(lat1)")
+        print ("Rounded Lat 2 = \(lat2)")
         
         let dLat = toRad(degrees: lat2-lat1);
         let dLon = toRad(degrees: lon2-lon1);
@@ -344,7 +344,7 @@ class wordFeedVC: UIViewController {
         errLabel1.isHidden = !state
         errLabel2.isHidden = !state
         if (state){
-            inProgressAnimation.startAnimating()
+           inProgressAnimation.startAnimating()
         }
         else{
             inProgressAnimation.isHidden = !state

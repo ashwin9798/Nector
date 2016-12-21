@@ -10,6 +10,7 @@ target 'Bro' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
 	pod 'Firebase/Auth'	
+    	pod 'SwiftGifOrigin', '~> 1.6.1'
 
 
   target 'BroTests' do
