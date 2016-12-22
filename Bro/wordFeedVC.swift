@@ -48,7 +48,11 @@ class wordFeedVC: UIViewController {
     
     @IBOutlet var errLabel1: UILabel!
     @IBOutlet var errLabel2: UILabel!
-    @IBOutlet weak var inProgressAnimation: UIActivityIndicatorView!
+    @IBOutlet weak var gifImage: UIImageView!
+
+    var errorState: Bool = true
+    var timer: Timer = Timer()
+    var whichGIFImageToDisplay: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -341,15 +345,31 @@ class wordFeedVC: UIViewController {
     
     func err(state: Bool)
     {
+        self.errorState = state
+        
         errLabel1.isHidden = !state
         errLabel2.isHidden = !state
-        if (state){
-           inProgressAnimation.startAnimating()
+        
+        whichGIFImageToDisplay = 1
+        
+        let aSelector : Selector = "updateTime" //calls the timer function
+        timer = Timer.scheduledTimer(timeInterval: 0.015, target: self, selector: aSelector, userInfo: nil, repeats: true)
+        
+        
+    }
+    
+    func updateTime(){  //timer to animate the gif
+        if (self.errorState == false){
+            self.timer.invalidate()
         }
         else{
-            inProgressAnimation.isHidden = !state
-            inProgressAnimation.stopAnimating()
+            self.whichGIFImageToDisplay += 1
+            
+            gifImage.image = UIImage(named: "frame-\((self.whichGIFImageToDisplay % 119) + 1)")
+            
         }
+        
     }
+
     
 }
