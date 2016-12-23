@@ -10,6 +10,9 @@ import UIKit
 import CoreData
 import Firebase
 
+var ipString = ""
+var locString = ""
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -18,7 +21,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         FIRApp.configure()
+                
+        if let url = URL(string: "https://www.iplocation.net/find-ip-address") {
+            do {
+                let contents = try String(contentsOf: url)
+                if let rangeOfZero = contents.range(of: "Your IP Address is <span style='font-weight: bold; color:green;'>", options: .backwards) {
+                    let suffix = String(contents.characters.suffix(from: rangeOfZero.upperBound))
+                    for c in suffix.characters
+                    {
+                        if (c == "<")
+                        {
+                            break
+                        }
+                        ipString = ipString + "\(c)"
+                    }
+                }
+                if let rangeOfZero = contents.range(of: "<tr><th>IP Location</th><td>", options: .backwards) {
+                    let suffix = String(contents.characters.suffix(from: rangeOfZero.upperBound))
+                    for c in suffix.characters
+                    {
+                        if (c == "&")
+                        {
+                            break
+                        }
+                        locString = locString + "\(c)"
+                    }
+                }
+            } catch {
+                print ("NO WIFI = NO NECTOR!")
+            }
+        } else {
+            // the URL was bad!
+        }
+        
+        //
+
         
         return true
     }

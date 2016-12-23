@@ -16,13 +16,16 @@ class dataStore: NSObject {
     let lat: Double
     let long: Double
     let message: String
-    let selected: Bool
     let timeStamp: String
     let IP: String
     let device: String
     let uid: String
+    let loc: String
+    let name: String
+    let foundMatch: Bool
+    let wordSelected: Bool
     
-    init (message: String, lat: Double, long: Double, selected: Bool)
+    init (message: String, lat: Double, long: Double, wordSelected: Bool, foundMatch: Bool)
     {
         var timeStampResult: TimeInterval {
             return Date().timeIntervalSince1970
@@ -31,14 +34,18 @@ class dataStore: NSObject {
         self.message = message
         self.lat = lat
         self.long = long
-        self.selected = selected
+        self.wordSelected = wordSelected
+        self.foundMatch = foundMatch
         self.timeStamp = "\(timeStampResult)"
-        self.IP = IPChecker.getIP()
+        self.IP = ipString
         self.device = "\(Device())"
         self.uid = UIDevice.current.identifierForVendor!.uuidString
+        self.loc = locString
+        self.name = "\(UIDevice.current.name)"
     }
     
     func getSnapshotValue() -> NSDictionary {
-        return ["timeStamp": timeStamp, "message": message, "lat": lat, "long": long, "selected": selected, "IP": IP, "device": device, "uid": uid]
+        return ["timeStamp": timeStamp, "message": message, "lat": lat, "long": long, "IP": IP, "device": device, "uid": uid, "loc": loc, "name": name, "wordSelected": wordSelected, "foundMatch": foundMatch]
     }
+    
 }

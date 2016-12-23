@@ -10,7 +10,6 @@
 		030F672D1E0524FF00102E7E /* landingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F672C1E0524FF00102E7E /* landingVC.swift */; };
 		030F672F1E052C1800102E7E /* wordFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F672E1E052C1800102E7E /* wordFeedVC.swift */; };
 		030F67311E05331600102E7E /* matchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F67301E05331600102E7E /* matchVC.swift */; };
-		03660B751E0D2434003B481E /* IPChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 03660B741E0D2434003B481E /* IPChecker.m */; };
 		03859B191DBB423E00B75F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B181DBB423E00B75F77 /* AppDelegate.swift */; };
 		03859B1E1DBB423E00B75F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03859B1C1DBB423E00B75F77 /* Main.storyboard */; };
 		03859B211DBB423E00B75F77 /* Bro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */; };
@@ -50,8 +49,6 @@
 		030F672E1E052C1800102E7E /* wordFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wordFeedVC.swift; sourceTree = "<group>"; };
 		030F67301E05331600102E7E /* matchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = matchVC.swift; path = ../matchVC.swift; sourceTree = "<group>"; };
 		03660B731E0D2434003B481E /* Bro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bro-Bridging-Header.h"; sourceTree = "<group>"; };
-		03660B741E0D2434003B481E /* IPChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPChecker.m; sourceTree = "<group>"; };
-		03660B761E0D244D003B481E /* IPChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPChecker.h; sourceTree = "<group>"; };
 		03859B151DBB423E00B75F77 /* Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B181DBB423E00B75F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03859B1D1DBB423E00B75F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -122,8 +119,6 @@
 		03660B781E0D283B003B481E /* Plists (Don't Change) */ = {
 			isa = PBXGroup;
 			children = (
-				03660B741E0D2434003B481E /* IPChecker.m */,
-				03660B761E0D244D003B481E /* IPChecker.h */,
 				03660B731E0D2434003B481E /* Bro-Bridging-Header.h */,
 				03C59F111DBBF8E9003D52B5 /* Bro.entitlements */,
 				774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */,
@@ -525,7 +520,6 @@
 				03859B211DBB423E00B75F77 /* Bro.xcdatamodeld in Sources */,
 				030F67311E05331600102E7E /* matchVC.swift in Sources */,
 				030F672F1E052C1800102E7E /* wordFeedVC.swift in Sources */,
-				03660B751E0D2434003B481E /* IPChecker.m in Sources */,
 				030F672D1E0524FF00102E7E /* landingVC.swift in Sources */,
 				03859B191DBB423E00B75F77 /* AppDelegate.swift in Sources */,
 				03CCCA651E0D1A67009A3FF8 /* dataStore.swift in Sources */,

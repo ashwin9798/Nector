@@ -1,4 +1,3 @@
-//  print ("Device ID: \(UIDevice.current.identifierForVendor!.uuidString)")
 //  landingVC.swift
 //  Copyright © 2016 HackLAds. All rights reserved.
 //  Nector
@@ -38,6 +37,7 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.requestLocation()
+        
         
         /*textField.center.x  -= ViewControllerView.bounds.width
         self.label1.alpha = 0
@@ -159,4 +159,5 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
         // show the alert
         self.present(alert, animated: true, completion: nil)
     }
+    
 }

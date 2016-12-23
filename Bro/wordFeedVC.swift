@@ -62,25 +62,6 @@ class wordFeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Updating Data Store
-        dataKey = storage.childByAutoId().key
-
-        myRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let me = userObject(snapshot: snapshot)
-            
-            let post = dataStore(message: me.message, lat: me.lat, long: me.long, selected: me.selected)
-            
-            let childUpdates = ["/\(self.dataKey)/": post.getSnapshotValue()]
-            
-            self.storage.updateChildValues(childUpdates)
-            
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-        
-        //
-        
         err(state: true)
         
         ref.observe(.childAdded, with: {(snapshot) in
@@ -242,7 +223,8 @@ class wordFeedVC: UIViewController {
                     
                     displayMessage = self.ArrayOfWords[0]
                     
-                    self.storage.child("\(self.dataKey)").child("selected").setValue(true)
+                    self.storage.child("\(self.dataKey)").child("foundMatch").setValue(true)
+                    self.storage.child("\(self.dataKey)").child("wordSelected").setValue(true)
                     
                     self.performSegue(withIdentifier: "toMatch", sender: Any?.self)
                     self.ref.child(keys).removeValue()
@@ -257,7 +239,33 @@ class wordFeedVC: UIViewController {
             
         })
         
-        
+        let backgroundQueue = DispatchQueue(label: "com.app.queue", qos: .background, target: nil)
+        backgroundQueue.async {
+            print("Run on background thread")
+            
+            // Updating Data Store
+            self.dataKey = self.storage.childByAutoId().key
+            
+            self.myRef.observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let me = userObject(snapshot: snapshot)
+                
+                //let post = dataStore(message: me.message, lat: me.lat, long: me.long,
+                                     
+                let post = dataStore(message: me.message, lat: me.lat, long: me.long, wordSelected: false, foundMatch: false)
+                
+                let childUpdates = ["/\(self.dataKey)/": post.getSnapshotValue()]
+                
+                self.storage.updateChildValues(childUpdates)
+                
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+            
+            //
+            
+        }
+
         // Do any additional setup after loading the view.
     }
 
@@ -304,10 +312,9 @@ class wordFeedVC: UIViewController {
                 
                 ref.child(key).child("match").setValue("\(self.colorGenerated)")
                 ref.child(key).child("selected").setValue(true)
-                //ref.child(self.UserKey).child("match").setValue("\(self.colorGenerated)")
                 ref.child(keys).removeValue()
                 
-                self.storage.child("\(dataKey)").child("selected").setValue(true)
+                self.storage.child("\(dataKey)").child("foundMatch").setValue(true)
                 
                 performSegue(withIdentifier: "toMatch", sender: Any?.self)
             }
