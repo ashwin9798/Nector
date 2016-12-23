@@ -355,11 +355,11 @@ class wordFeedVC: UIViewController {
         let aSelector : Selector = "updateTime" //calls the timer function
         timer = Timer.scheduledTimer(timeInterval: 0.015, target: self, selector: aSelector, userInfo: nil, repeats: true)
         
-        
     }
     
     func updateTime(){  //timer to animate the gif
         if (self.errorState == false){
+            gifImage.image = nil
             self.timer.invalidate()
         }
         else{
