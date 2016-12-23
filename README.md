@@ -1,5 +1,5 @@
-# Nector
-Breaking the Ice, One Word at a Time
+# Nector - Breaking the Ice, One Word at a Time
+
 In a world becoming increasingly dependent on smartphones, we are slowly losing the values of physical interaction and conversation: the very things that make us human.
 
 Introducing Nector: your ultimate wingman. We know it can be hard to break the ice and meet new people. Our goal is to help you do that.
