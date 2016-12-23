@@ -1,3 +1,4 @@
+//  print ("Device ID: \(UIDevice.current.identifierForVendor!.uuidString)")
 //  landingVC.swift
 //  Copyright © 2016 HackLAds. All rights reserved.
 //  Nector
@@ -28,13 +29,11 @@ class landingVC: UIViewController, CLLocationManagerDelegate {
     
     let whitespace = NSCharacterSet.whitespaces
     let manager = CLLocationManager()
-
-    var existingUsers = [userObject]()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = FIRDatabase.database().reference()
+        ref = FIRDatabase.database().reference().child("Current")
         
         manager.delegate = self
         manager.requestWhenInUseAuthorization()

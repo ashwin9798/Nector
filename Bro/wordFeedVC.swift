@@ -20,6 +20,7 @@
 
 import UIKit
 import Firebase
+import DeviceKit
 
 var displayColor = UIColor.black
 
@@ -41,9 +42,11 @@ class wordFeedVC: UIViewController {
     var colorGenerated: Int = 0
     
     
-    var ref: FIRDatabaseReference = FIRDatabase.database().reference()
-    var myRef: FIRDatabaseReference = FIRDatabase.database().reference().child(keys).child("selected")
-    var myRef1: FIRDatabaseReference = FIRDatabase.database().reference().child(keys).child("match")
+    var ref: FIRDatabaseReference = FIRDatabase.database().reference().child("Current")
+    var myRef: FIRDatabaseReference = FIRDatabase.database().reference().child("Current").child(keys)
+    var mySelected: FIRDatabaseReference = FIRDatabase.database().reference().child("Current").child(keys).child("selected")
+    var myMatch: FIRDatabaseReference = FIRDatabase.database().reference().child("Current").child(keys).child("match")
+    let storage: FIRDatabaseReference = FIRDatabase.database().reference().child("Data Store")
     
     
     @IBOutlet var errLabel1: UILabel!
@@ -54,9 +57,31 @@ class wordFeedVC: UIViewController {
     var timer: Timer = Timer()
     var whichGIFImageToDisplay: Int = 1
     
+    var dataKey: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-               err(state: true)
+        
+        // Updating Data Store
+        dataKey = storage.childByAutoId().key
+
+        myRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let me = userObject(snapshot: snapshot)
+            
+            let post = dataStore(message: me.message, lat: me.lat, long: me.long, selected: me.selected)
+            
+            let childUpdates = ["/\(self.dataKey)/": post.getSnapshotValue()]
+            
+            self.storage.updateChildValues(childUpdates)
+            
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+        //
+        
+        err(state: true)
         
         ref.observe(.childAdded, with: {(snapshot) in
             
@@ -159,7 +184,7 @@ class wordFeedVC: UIViewController {
             
         })
         
-        self.myRef1.observe(FIRDataEventType.value, with: { (snapshot) in
+        self.myMatch.observe(FIRDataEventType.value, with: { (snapshot) in
             
             if !snapshot.exists(){
                 print("waiting on color")
@@ -201,7 +226,7 @@ class wordFeedVC: UIViewController {
             }
         })
         
-        myRef.observe(FIRDataEventType.value, with: { (snapshot) in
+        mySelected.observe(FIRDataEventType.value, with: { (snapshot) in
             if !snapshot.exists()
             {
                 print("Data snapshot doesn't exist...")
@@ -216,6 +241,8 @@ class wordFeedVC: UIViewController {
                     print("Match Complete")
                     
                     displayMessage = self.ArrayOfWords[0]
+                    
+                    self.storage.child("\(self.dataKey)").child("selected").setValue(true)
                     
                     self.performSegue(withIdentifier: "toMatch", sender: Any?.self)
                     self.ref.child(keys).removeValue()
@@ -279,6 +306,9 @@ class wordFeedVC: UIViewController {
                 ref.child(key).child("selected").setValue(true)
                 //ref.child(self.UserKey).child("match").setValue("\(self.colorGenerated)")
                 ref.child(keys).removeValue()
+                
+                self.storage.child("\(dataKey)").child("selected").setValue(true)
+                
                 performSegue(withIdentifier: "toMatch", sender: Any?.self)
             }
         }
@@ -341,6 +371,8 @@ class wordFeedVC: UIViewController {
         // Remove Firebase Observers
         ref.removeAllObservers()
         myRef.removeAllObservers()
+        mySelected.removeAllObservers()
+        myMatch.removeAllObservers()
     }
     
     func err(state: Bool)
@@ -352,7 +384,7 @@ class wordFeedVC: UIViewController {
         
         whichGIFImageToDisplay = 1
         
-        let aSelector : Selector = "updateTime" //calls the timer function
+        let aSelector : Selector = #selector(wordFeedVC.updateTime) //calls the timer function
         timer = Timer.scheduledTimer(timeInterval: 0.015, target: self, selector: aSelector, userInfo: nil, repeats: true)
         
     }

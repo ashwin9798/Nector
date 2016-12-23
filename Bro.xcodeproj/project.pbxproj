@@ -10,6 +10,7 @@
 		030F672D1E0524FF00102E7E /* landingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F672C1E0524FF00102E7E /* landingVC.swift */; };
 		030F672F1E052C1800102E7E /* wordFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F672E1E052C1800102E7E /* wordFeedVC.swift */; };
 		030F67311E05331600102E7E /* matchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F67301E05331600102E7E /* matchVC.swift */; };
+		03660B751E0D2434003B481E /* IPChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = 03660B741E0D2434003B481E /* IPChecker.m */; };
 		03859B191DBB423E00B75F77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B181DBB423E00B75F77 /* AppDelegate.swift */; };
 		03859B1E1DBB423E00B75F77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03859B1C1DBB423E00B75F77 /* Main.storyboard */; };
 		03859B211DBB423E00B75F77 /* Bro.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 		03859B4A1DBB482A00B75F77 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03859B491DBB482A00B75F77 /* user.swift */; };
 		039EB0721E0ACB6800844576 /* hex-loader2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 039EB0701E0ACB6800844576 /* hex-loader2.gif */; };
 		039EB0731E0ACB6800844576 /* load.gif in Resources */ = {isa = PBXBuildFile; fileRef = 039EB0711E0ACB6800844576 /* load.gif */; };
+		03CCCA651E0D1A67009A3FF8 /* dataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CCCA641E0D1A67009A3FF8 /* dataStore.swift */; };
 		3D4F8202BEFF48206FE8C266 /* Pods_BroTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48AA1A33F026E7271C4DC067 /* Pods_BroTests.framework */; };
 		4C620804472DC814146A1EA9 /* Pods_Bro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72009979960C2DA67CEC33D3 /* Pods_Bro.framework */; };
 		774EBEC31E0AAE4500D3362A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */; };
@@ -47,6 +49,9 @@
 		030F672C1E0524FF00102E7E /* landingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = landingVC.swift; sourceTree = "<group>"; };
 		030F672E1E052C1800102E7E /* wordFeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wordFeedVC.swift; sourceTree = "<group>"; };
 		030F67301E05331600102E7E /* matchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = matchVC.swift; path = ../matchVC.swift; sourceTree = "<group>"; };
+		03660B731E0D2434003B481E /* Bro-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bro-Bridging-Header.h"; sourceTree = "<group>"; };
+		03660B741E0D2434003B481E /* IPChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IPChecker.m; sourceTree = "<group>"; };
+		03660B761E0D244D003B481E /* IPChecker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IPChecker.h; sourceTree = "<group>"; };
 		03859B151DBB423E00B75F77 /* Bro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03859B181DBB423E00B75F77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03859B1D1DBB423E00B75F77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,6 +69,7 @@
 		039EB0701E0ACB6800844576 /* hex-loader2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "hex-loader2.gif"; sourceTree = "<group>"; };
 		039EB0711E0ACB6800844576 /* load.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = load.gif; sourceTree = "<group>"; };
 		03C59F111DBBF8E9003D52B5 /* Bro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bro.entitlements; sourceTree = "<group>"; };
+		03CCCA641E0D1A67009A3FF8 /* dataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dataStore.swift; sourceTree = "<group>"; };
 		386235C906A21DDB404D39FC /* Pods-BroTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BroTests/Pods-BroTests.release.xcconfig"; sourceTree = "<group>"; };
 		3A332ABE78CC45702C66E210 /* Pods-BroTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BroTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BroTests/Pods-BroTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4683FD699FA75E2DEA91A5DE /* Pods_BroUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BroUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +110,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03660B771E0D2824003B481E /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				039EB0701E0ACB6800844576 /* hex-loader2.gif */,
+				039EB0711E0ACB6800844576 /* load.gif */,
+			);
+			name = GIFs;
+			sourceTree = "<group>";
+		};
+		03660B781E0D283B003B481E /* Plists (Don't Change) */ = {
+			isa = PBXGroup;
+			children = (
+				03660B741E0D2434003B481E /* IPChecker.m */,
+				03660B761E0D244D003B481E /* IPChecker.h */,
+				03660B731E0D2434003B481E /* Bro-Bridging-Header.h */,
+				03C59F111DBBF8E9003D52B5 /* Bro.entitlements */,
+				774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */,
+				03859B271DBB423E00B75F77 /* Info.plist */,
+				03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */,
+			);
+			name = "Plists (Don't Change)";
+			sourceTree = "<group>";
+		};
+		03660B791E0D285D003B481E /* Object Classes */ = {
+			isa = PBXGroup;
+			children = (
+				03859B491DBB482A00B75F77 /* user.swift */,
+				03CCCA641E0D1A67009A3FF8 /* dataStore.swift */,
+			);
+			name = "Object Classes";
+			sourceTree = "<group>";
+		};
+		03660B7A1E0D2887003B481E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				030F672C1E0524FF00102E7E /* landingVC.swift */,
+				030F672E1E052C1800102E7E /* wordFeedVC.swift */,
+				030F67301E05331600102E7E /* matchVC.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		03859B0C1DBB423E00B75F77 = {
 			isa = PBXGroup;
 			children = (
@@ -129,20 +177,14 @@
 		03859B171DBB423E00B75F77 /* Bro */ = {
 			isa = PBXGroup;
 			children = (
-				039EB0701E0ACB6800844576 /* hex-loader2.gif */,
-				039EB0711E0ACB6800844576 /* load.gif */,
-				03C59F111DBBF8E9003D52B5 /* Bro.entitlements */,
+				03660B7A1E0D2887003B481E /* View Controllers */,
+				03660B791E0D285D003B481E /* Object Classes */,
+				03660B771E0D2824003B481E /* GIFs */,
+				03660B781E0D283B003B481E /* Plists (Don't Change) */,
 				03859B181DBB423E00B75F77 /* AppDelegate.swift */,
-				774EBEC21E0AAE4500D3362A /* GoogleService-Info.plist */,
-				03859B491DBB482A00B75F77 /* user.swift */,
-				030F672C1E0524FF00102E7E /* landingVC.swift */,
-				030F672E1E052C1800102E7E /* wordFeedVC.swift */,
-				030F67301E05331600102E7E /* matchVC.swift */,
 				03859B1C1DBB423E00B75F77 /* Main.storyboard */,
 				03859B221DBB423E00B75F77 /* Assets.xcassets */,
 				03859B241DBB423E00B75F77 /* LaunchScreen.storyboard */,
-				03859B271DBB423E00B75F77 /* Info.plist */,
-				03859B1F1DBB423E00B75F77 /* Bro.xcdatamodeld */,
 			);
 			path = Bro;
 			sourceTree = "<group>";
@@ -266,6 +308,7 @@
 					03859B141DBB423E00B75F77 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = A3WW4ML98X;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -482,8 +525,10 @@
 				03859B211DBB423E00B75F77 /* Bro.xcdatamodeld in Sources */,
 				030F67311E05331600102E7E /* matchVC.swift in Sources */,
 				030F672F1E052C1800102E7E /* wordFeedVC.swift in Sources */,
+				03660B751E0D2434003B481E /* IPChecker.m in Sources */,
 				030F672D1E0524FF00102E7E /* landingVC.swift in Sources */,
 				03859B191DBB423E00B75F77 /* AppDelegate.swift in Sources */,
+				03CCCA651E0D1A67009A3FF8 /* dataStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +684,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Bro/Bro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = A3WW4ML98X;
@@ -647,6 +693,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HackLAds.Bro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bro/Bro-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -658,6 +706,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Bro/Bro.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -667,6 +716,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HackLAds.Bro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Bro/Bro-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
